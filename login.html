@@ -14,7 +14,12 @@
 			 if(r!=null)return  unescape(r[2]); return null;
 		}
 		//document.getElementById("div1").innerHTML=GetQueryString("aa");
-		document.getElementById("div1").innerHTML=window.location;
+		//document.getElementById("div1").innerHTML=window.location;
+		var code = GetQueryString("code")
+		if(code){
+			window.AppInventor.setWebViewString(code);
+		}
+		
     </script>
   </body>
 </html>
