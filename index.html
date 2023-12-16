@@ -37,7 +37,8 @@
 </head>
 
 <body>
-
+<input id='localId'></input> <button id='connect'>Connect</button><br>
+<input id='remoteId'></input> <button id='call'>Call</button> <button id='hangup'>Hang Up</button><br>
 <div class="video-box">
 	<video src="" id="local-video" autoplay muted ></video>
 </div>
@@ -151,7 +152,17 @@ function feedback(log){
 	}
 }
 
+document.getElementById("connect").onclick=function(){
+	connect(document.getElementById("localId").value);
+}
 
+document.getElementById("call").onclick=function(){
+	call(document.getElementById("remoteId").value);
+}
+document.getElementById("hangup").onclick=function(){
+	hangup();
+}
+startLocal(false);
 	</script>
 </body>
 
